@@ -1,3 +1,10 @@
+// # Exercício 3
+
+// Utilizando o array **produtos** disponibilizado, retorne um novo array com os **nomes** dos produtos da categoria **limpeza**.
+
+// Observe que cada elemento do array **produtos** é um objeto com as propriedades *nome*, *preco* e *categoria*.
+
+
 const produtos = [
     { nome: "Alface Lavada", categoria: "Hortifruti", preco: 2.5 },
     { nome: "Guaraná 2l", categoria: "Bebidas", preco: 7.8 },
@@ -11,3 +18,16 @@ const produtos = [
     { nome: "Sabão em Pó", categoria: "Limpeza", preco: 10.80 }
  ]
  
+
+ const produtosDeLimpeza = produtos.filter((lim) => {
+return lim.categoria === "Limpeza"
+
+ }) 
+
+ const produtosNovos = produtosDeLimpeza.map((nome) => {
+    return nome.nome
+ })
+
+
+ console.log(produtosDeLimpeza)
+ console.log(produtosNovos);
